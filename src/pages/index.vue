@@ -23,13 +23,14 @@
 
     #app {
         height: 100%;
+        background-color: color('g-deep-blue', 'base');
     }
 
     .content-left {
         width: 30%;
         float: left;
         height: 100%;
-        background-color: color('deep-purple', 'base');
+        background-color: color('purple', 'darken-4');
         margin-bottom: -4000px;
         padding-bottom: 4000px;
     }
