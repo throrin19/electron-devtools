@@ -35,7 +35,7 @@
     };
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
     .title-bar {
         height: 25px;
         -webkit-user-select: none;

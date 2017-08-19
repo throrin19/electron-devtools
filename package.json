@@ -46,6 +46,7 @@
     "sass-loader": "6.0.6"
   },
   "dependencies": {
-    "muse-ui": "2.1.0"
+    "muse-ui": "2.1.0",
+    "vue-router": "2.7.0"
   }
 }
