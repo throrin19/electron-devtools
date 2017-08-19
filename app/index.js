@@ -36,11 +36,12 @@ const createMainWindow = () => {
     const lastWindowState = config.get('lastWindowState');
 
     const win = new BrowserWindow({
-        title  : app.getName(),
-        x      : lastWindowState.x,
-        y      : lastWindowState.y,
-        width  : lastWindowState.width,
-        height : lastWindowState.height,
+        title         : app.getName(),
+        x             : lastWindowState.x,
+        y             : lastWindowState.y,
+        width         : lastWindowState.width,
+        height        : lastWindowState.height,
+        frame         : false,
     });
 
 

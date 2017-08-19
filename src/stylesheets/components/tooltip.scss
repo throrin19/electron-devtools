@@ -1,0 +1,25 @@
+.tooltip {
+    display: none;
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+    padding: 4px;
+    z-index: 10000;
+
+    .tooltip-content {
+        height: $tooltip-height;
+        line-height: $tooltip-height;
+        background: $tooltip-background-color;
+        color: $tooltip-text-color;
+        padding: $tooltip-padding;
+        font-size: $tooltip-font-size;
+    }
+
+    &.tooltip-open-transitionend {
+        display: block;
+    }
+
+    &.tooltip-after-open {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,356 @@
+// 1. Global
+// ==========================================================================
+
+// Media Query Ranges
+$small-screen-up                                                : 601px !default;
+$medium-screen-up                                               : 993px !default;
+$large-screen-up                                                : 1201px !default;
+$small-screen                                                   : 600px !default;
+$medium-screen                                                  : 992px !default;
+$large-screen                                                   : 1200px !default;
+
+$medium-and-up                                                  : "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up                                                   : "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down                                                 : "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down                                                : "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only                                                    : "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+// Disabled styles
+$button-disabled-background                                     : #DFDFDF !default;
+$button-disabled-color                                          : #9F9F9F !default;
+
+// Flag Icons
+$available-langs-list                                           : ('cn', 'de', 'gb', 'es', 'fr', 'it', 'nl', 'pl', 'pt', 'sv');
+
+$flag-icon-css-path                                             : '~flag-icon-css/flags' !default;
+$flag-icon-rect-path                                            : '/4x3' !default;
+$flag-icon-square-path                                          : '/1x1' !default;
+
+// 2. Refonte Muse-UI
+// ==========================================================================
+$mu-text-field-help-font-size                                   : 10px;
+$mu-text-field-help-line-height                                 : $mu-text-field-help-font-size;
+$mu-text-field-help-icon-size                                   : 16px;
+$mu-text-field-help-margin-top                                  : 6px;
+$mu-text-field-font-size                                        : 13px;
+$mu-text-field-min-height                                       : 73px;
+$mu-text-field-icon-top                                         : 25px;
+$mu-text-field-content-padding-top                              : 20px;
+$mu-text-field-input-height                                     : 28px;
+$mu-text-field-label-top                                        : 8px;
+$mu-text-field-label-float-top                                  : -2px;
+
+// 3. Grid
+// ==========================================================================
+
+$num-cols                                                       : 12 !default;
+$gutter-width                                                   : 1.5rem !default;
+$element-top-margin                                             : $gutter-width/3 !default;
+$element-bottom-margin                                          : ($gutter-width*2)/3 !default;
+
+// 4. Roboto Font-weight
+// ==========================================================================
+$roboto-thin                                                    : 200;
+$roboto-light                                                   : 300;
+$roboto-regular                                                 : 400;
+$roboto-medium                                                  : 500;
+$roboto-bold                                                    : 700;
+
+// 5. Contextual colors
+// ==========================================================================
+$disabled-background-color                                      : $button-disabled-background;
+$disabled-text-color                                            : $button-disabled-color;
+$contextual-level-primary                                       : 'darken-3';
+$contextual-level-secondary                                     : 'lighten-5';
+$info-color-primary                                             : color('blue', $contextual-level-primary);
+$info-color-secondary                                           : color('blue', $contextual-level-secondary);
+$success-color-primary                                          : color('green', $contextual-level-primary);
+$success-color-secondary                                        : color('green', $contextual-level-secondary);
+$danger-color-primary                                           : color('red', $contextual-level-primary);
+$danger-color-secondary                                         : color('red', $contextual-level-secondary);
+$warning-color-primary                                          : color('yellow', $contextual-level-primary);
+$warning-color-secondary                                        : color('yellow', $contextual-level-secondary);
+$default-color-primary                                          : color('grey', $contextual-level-primary);
+$default-color-secondary                                        : color('grey', $contextual-level-secondary);
+
+// 6. SlidePanel
+// ==========================================================================
+$slidepanel-background-color                                    : color('grey', 'lighten-3');
+$slidepanel-fade-background-color                               : color('g-deep-blue', 'base');
+$slidepanel-fade-opacity                                        : 0.7;
+$slidepanel-topbar-height                                       : 30px;
+$slidepanel-topbar-line-height                                  : $slidepanel-topbar-height;
+$slidepanel-topbar-background-color                             : color('g-deep-blue', 'base');
+$slidepanel-topbar-text-color                                   : color('shades', 'white');
+$slidepanel-topbar-padding-left                                 : 45px;
+$slidepanel-topbar-font-size                                    : 12px;
+$slidepanel-topbar-font-weight                                  : $roboto-medium;
+$slidepanel-full-size                                           : 100%;
+$slidepanel-full-left                                           : 0;
+$slidepanel-medium-size                                         : percentage(2/3);
+$slidepanel-medium-left                                         : percentage(1/3);
+$slidepanel-small-size                                          : percentage(1/3);
+$slidepanel-small-left                                          : percentage(2/3);
+$slidepanel-close-background-color                              : color('g-deep-blue', 'lighten-2');
+$slidepanel-close-hover-background-color                        : color('g-deep-blue', 'lighten-4');
+$slidepanel-bottom-buttons-height                               : 54px;
+
+// 7. Action Buttons
+// ==========================================================================
+$btn-action-small-width                                         : 25px;
+$btn-action-normal-width                                        : 30px;
+$btn-action-big-width                                           : 35px;
+$btn-actions-default-background                                 : 'grey';
+$btn-actions-default-background-light                           : 'lighten-1';
+$btn-action-default-text-color                                  : color('shades', 'white');
+$btn-action-invert-text-color                                   : color('g-deep-blue', 'base');
+
+// 8. Control Buttons (slidePanel and modal
+// ==========================================================================
+$btn-control-bar-height                                         : $slidepanel-bottom-buttons-height;
+$btn-control-font-weight                                        : $roboto-light;
+$btn-control-font-size                                          : 14px;
+
+$colors-control-base-level                                      : 'lighten-1';
+$colors-control-hover-level                                     : 'base';
+
+// 9. Table
+// ==========================================================================
+$table-border-color                                             : #d0d0d0 !default;
+$table-striped-color                                            : #f2f2f2 !default;
+$table-actions-width                                            : 100px;
+$table-th-padding                                               : 10px;
+$table-th-font-size                                             : 12px;
+$table-th-font-weight                                           : $roboto-medium;
+$table-tr-even-background                                       : color('grey', 'lighten-4');
+$table-tr-odd-background                                        : color('grey', 'lighten-5');
+$table-tr-border                                                : 3px transparent solid;
+$table-td-padding                                               : 15px 20px;
+$table-td-font-size                                             : 12px;
+$table-td-font-weight                                           : $roboto-regular;
+
+// 10. Dialogs
+// ==========================================================================
+$modal-small-padding                                            : 15px;
+$modal-title-font-size                                          : 22px;
+$modal-title-font-color                                         : color('g-grey', 'darken-1');
+$modal-title-font-weight                                        : $roboto-thin;
+$modal-content-font-size                                        : 12px;
+$modal-content-font-weight                                      : $roboto-regular;
+$modal-content-font-color                                       : color('g-deep-blue', 'base');
+$modal-overlay-color                                            : color('g-deep-blue', 'base');
+$modal-overlay-opacity                                          : 0.7;
+$modal-alert-text-color                                         : color('g-grey', 'base');
+$modal-alert-icon-size                                          : 110px;
+$modal-width-full                                               : 100%;
+$modal-width-big                                                : 900px;
+$modal-width-medium                                             : 580px;
+$modal-width-small                                              : 420px;
+$modal-margin                                                   : 100px auto 0 auto;
+$modal-max-height                                               : 70%;
+$modal-background-color                                         : color('grey', 'lighten-5');
+
+// 11. Typography
+// ==========================================================================
+
+$off-black                                                      : rgba(0, 0, 0, 0.87) !default;
+// Header Styles
+$h1-fontsize                                                    : 4.2rem !default;
+$h2-fontsize                                                    : 3.56rem !default;
+$h3-fontsize                                                    : 2.92rem !default;
+$h4-fontsize                                                    : 2.28rem !default;
+$h5-fontsize                                                    : 1.64rem !default;
+$h6-fontsize                                                    : 1rem !default;
+
+
+// 12. Flow Text
+// ==========================================================================
+
+$range                                                          : $large-screen - $small-screen !default;
+$intervals                                                      : 20 !default;
+$interval-size                                                  : $range / $intervals !default;
+
+// 13. Top Bar
+// ==========================================================================
+$top-bar-height                                                 : 60px;
+$top-bar-background                                             : 'g-deep-blue';
+$top-bar-text-color                                             : 'g-grey';
+$top-bar-font-size                                              : 11px;
+$top-bar-back-width                                             : 140px;
+$top-bar-event-width                                            : 355px;
+$top-bar-event-info-width                                       : 360px;
+$top-bar-home-btn-width                                         : 33px;
+
+// 14. Left Bar
+// ==========================================================================
+$left-bar-width                                                 : $top-bar-back-width + $top-bar-height;
+$left-bar-text-color                                            : 'g-grey';
+$left-bar-text-color-level-base                                 : 'lighten-4';
+$left-bar-text-color-level-active                               : 'lighten-5';
+$left-bar-text-color-dark-level-base                            : 'darken-3';
+$left-bar-text-color-dark-level-active                          : 'darken-4';
+$left-bar-font-size                                             : 10px;
+$left-bar-font-weight                                           : $roboto-regular;
+$left-bar-font-weight-active                                    : $roboto-bold;
+$left-bar-item-padding                                          : 10px 14px;
+
+// 15. Bottom Bar
+// ==========================================================================
+$bottom-bar-height                                              : 35px;
+$bottom-bar-background                                          : 'g-deep-blue';
+$bottom-bar-text-color                                          : 'g-grey';
+
+$users-connected-width                                          : $left-bar-width;
+$users-connected-background                                     : $bottom-bar-background;
+$users-connected-text-color                                     : $bottom-bar-text-color;
+$users-connected-font-weight                                    : $roboto-medium;
+$users-connected-font-size                                      : 10px;
+$users-connected-expand-font-size                               : 24px;
+$users-connected-offline-background                             : color('red', 'base');
+$users-connected-offline-color                                  : color('shades', 'white');
+
+// 16. NavBar
+// ===========================================================================
+$navbar-height                                                  : 35px;
+$navbar-normal-background                                       : color('g-blue-grey', 'lighten-4');
+$navbar-vertical-background                                     : color('g-blue-grey', 'lighten-5');
+$navbar-active-background                                       : color('g-blue-grey', 'lighten-3');
+$navbar-font-size                                               : 11px;
+$navbar-normal-font-weight                                      : $roboto-regular;
+$navbar-active-font-weight                                      : $roboto-bold;
+$navbar-font-color                                              : color('g-deep-blue', 'base');
+$navbar-selected-font-color                                     : $navbar-font-color;
+$navbar-item-padding                                            : 0 25px;
+$navbar-spacing                                                 : 3px;
+$navbar-vertical-width                                          : $left-bar-width;
+$navbar-vertical-container-left                                 : $navbar-vertical-width;
+$navbar-badge-width                                             : 45px;
+
+// 17. Langs
+// ===========================================================================
+$langs-height                                                   : $navbar-height;
+$langs-width                                                    : $navbar-height;
+$langs-background                                               : $navbar-active-background;
+$langs-dropdown-background                                      : $navbar-normal-background;
+$langs-font-size                                                : $navbar-font-size + 1;
+$langs-font-color                                               : $navbar-font-color;
+
+// 18. Switch
+// ===========================================================================
+$btn-switch-width                                               : 50px;
+$btn-switch-height                                              : 20px;
+$btn-switch-font-weight                                         : $roboto-bold;
+$btn-switch-font-size                                           : 10px;
+$btn-switch-font-color                                          : color('shades', 'white');
+$btn-switch-default-color                                       : color('grey', 'lighten-1');
+$btn-switch-active-color                                        : color('green', 'lighten-1');
+$btn-switch-inactive-color                                      : color('red', 'lighten-1');
+$btn-switch-disabled-color                                      : $disabled-background-color;
+$btn-switch-choice-width                                        : $btn-switch-width / 2;
+
+// 19. Message Boxes
+// ===========================================================================
+$message-box-width                                              : 100%;
+$message-box-font-size                                          : 12px;
+$message-box-margin                                             : 15px 0;
+$message-box-content-padding                                    : 13px 0 13px 13px;
+$message-box-button-min-width                                   : percentage(1/3);
+$message-box-button-min-height                                  : 65px;
+
+// 20. Avatar
+// ===========================================================================
+$avatar-default-width                                           : 32px;
+$avatar-default-height                                          : 32px;
+$avatar-default-border-radius                                   : 32px;
+$avatar-default-font-size                                       : 15px;
+
+$avatar-large-width                                             : 64px;
+$avatar-large-height                                            : 64px;
+$avatar-large-border-radius                                     : 64px;
+$avatar-large-font-size                                         : 24px;
+
+$avatar-default-background-color                                : #666;
+
+// 21. Color Picker
+// ===========================================================================
+$color-picker-slider-height                                     : 5px;
+$color-picker-slider-border-radius                              : ($color-picker-slider-height / 2);
+$color-picker-slider-cursor-size                                : 10px;
+$color-picker-slider-margin                                     : ($color-picker-slider-cursor-size / 2) ($color-picker-slider-cursor-size / 2) ($color-picker-slider-cursor-size / 2) ($color-picker-slider-cursor-size / 2);
+$color-picker-checkerboard-background-color                     : #fff;
+$color-picker-checkerboard-background-color2                    : #e6e6e6;
+$color-picker-checkerboard-background-image                     : linear-gradient(45deg, $color-picker-checkerboard-background-color2 25%, transparent 25%, transparent 75%, $color-picker-checkerboard-background-color2 75%, $color-picker-checkerboard-background-color2), linear-gradient(45deg, $color-picker-checkerboard-background-color2 25%, transparent 25%, transparent 75%, $color-picker-checkerboard-background-color2 75%, $color-picker-checkerboard-background-color2);
+
+// 22. Chips
+// ===========================================================================
+$chip-height                                                    : 32px;
+$chip-background-color                                          : color('grey', 'lighten-2');
+$chip-font-size                                                 : 13px;
+
+// 23. Tooltip
+// ===========================================================================
+$tooltip-background-color                                       : color('g-deep-blue', 'base');
+$tooltip-text-color                                             : color('shades', 'white');
+$tooltip-height                                                 : 35px;
+$tooltip-padding                                                : 0 15px;
+$tooltip-font-size                                              : 12px;
+
+// 24. DateTime Picker
+// ===========================================================================
+$dateTimepicker-height                                          : 76px;
+$dateTimepicker-background-color                                : color('shades', 'white');
+$dateTimepicker-font-size                                       : 12px;
+$dateTimepicker-font-weight                                     : $roboto-medium;
+$datetimepicker-label-width                                     : 34px;
+$datetimepicker-label-background-color                          : color('g-grey', 'lighten-1');
+$datetimepicker-label-text-color                                : color('shades', 'white');
+$dateTimepicker-label-font-size                                 : 12px;
+$dateTimepicker-label-font-weight                               : $roboto-regular;
+
+// 25. Form Design
+// ===========================================================================
+$form-font-size                                                 : 12px;
+$form-font-color                                                : color('g-deep-blue', 'base');
+$form-fieldset-background-color                                 : color('shades', 'white');
+$form-fieldset-margin                                           : 30px 15px 40px 15px;
+$form-legend-top                                                : -20px;
+$form-legend-left                                               : 0;
+$form-legend-font-size                                          : 12px;
+$form-legend-font-color                                         : color('g-blue-grey', 'darken-1');
+$form-legend-font-weight                                        : $roboto-medium;
+
+// 26. Rating
+// ===========================================================================
+$rating-default-color                                           : color('orange', 'base');
+
+// 27. Form tabs
+// ===========================================================================
+$form-tabs-width                                                : 200px;
+$form-tabs-background-color                                     : color('grey', 'lighten-4');
+$form-tabs-font-size                                            : $form-font-size;
+$form-tabs-active-font-weight                                   : $roboto-medium;
+$form-tabs-active-background-color                              : color('grey', 'lighten-2');
+
+// 28. Toasts
+// ===========================================================================
+$toast-wrapper-z-index                                          : 10000;
+$toast-wrapper-top                                              : 40px;
+$toast-wrapper-right                                            : 20px;
+$toast-min-width                                                : 280px;
+$toast-max-width                                                : 560px;
+$toast-border-radius                                            : 2px;
+$toast-padding                                                  : 14px 24px;
+$toast-icon-margin                                              : 15px;
+$toast-font-size                                                : 14px;
+$toast-font-weight                                              : $roboto-regular;
+$toast-action-margin                                            : 48px;
+$toast-action-font-weight                                       : $roboto-bold;
+$toast-spacing                                                  : 10px;
+$toast-background-color                                         : color('g-deep-blue', 'base');
+$toast-font-color                                               : color('g-grey', 'lighten-3');
+
+// 29. Empty View
+// ===========================================================================
+$empty-view-text-color                                          : color('g-grey', 'base');
+$empty-view-icon-color                                          : color('g-grey', 'lighten-4');
+$empty-view-text-margin                                         : 20px;

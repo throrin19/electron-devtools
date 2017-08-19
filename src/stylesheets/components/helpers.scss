@@ -1,0 +1,153 @@
+// Positioning
+.valign-wrapper {
+    display: flex;
+    align-items: center;
+
+    .valign {
+        display: block;
+    }
+}
+
+
+// classic clearfix
+.clearfix {
+    clear: both;
+}
+
+.hoverable {
+    transition: box-shadow .25s;
+    box-shadow: 0;
+}
+
+.hoverable:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// Dividers
+
+.divider {
+    height: 1px;
+    overflow: hidden;
+    background-color: color("grey", "lighten-2");
+}
+
+/*********************
+  Media Query Classes
+**********************/
+.hide-on-small-only, .hide-on-small-and-down {
+    @media #{$small-and-down} {
+        display: none !important;
+    }
+}
+.hide-on-med-and-down {
+    @media #{$medium-and-down} {
+        display: none !important;
+    }
+}
+.hide-on-med-and-up {
+    @media #{$medium-and-up} {
+        display: none !important;
+    }
+}
+.hide-on-med-only {
+    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+        display: none !important;
+    }
+}
+.hide-on-large-only {
+    @media #{$large-and-up} {
+        display: none !important;
+    }
+}
+.show-on-large {
+    @media #{$large-and-up} {
+        display: block !important;
+    }
+}
+.show-on-medium {
+    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+        display: block !important;
+    }
+}
+.show-on-small {
+    @media #{$small-and-down} {
+        display: block !important;
+    }
+}
+.show-on-medium-and-up {
+    @media #{$medium-and-up} {
+        display: block !important;
+    }
+}
+.show-on-medium-and-down {
+    @media #{$medium-and-down} {
+        display: block !important;
+    }
+}
+
+
+// Center text on mobile
+.center-on-small-only {
+    @media #{$small-and-down} {
+        text-align: center;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+// Text Align
+.left-align {
+    text-align: left;
+}
+.right-align {
+    text-align: right
+}
+.center, .center-align {
+    text-align: center;
+}
+
+.left {
+    float: left !important;
+}
+.right {
+    float: right !important;
+}
+
+// No Text Select
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.truncate {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.align-outer {
+    display: flex;
+    justify-content: space-between;
+}
