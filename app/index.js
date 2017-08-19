@@ -43,9 +43,9 @@ function createMainWindow() {
     height: lastWindowState.height
   })
 
-  
+
   const url = isDev ? 'http://localhost:4000' : `file://${path.join(__dirname, 'renderer', 'index.html')}`
-  
+
   win.loadURL(url)
 
   win.on('close', e => {
