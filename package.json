@@ -38,6 +38,8 @@
     "electron": "^1.6.10",
     "electron-builder": "^18.0.1",
     "electron-builder-squirrel-windows": "^18.0.0",
+    "eslint": "^4.5.0",
+    "eslint-config-throrinstudio": "^1.0.0",
     "poi": "^9.3.0-rc.3"
   }
 }

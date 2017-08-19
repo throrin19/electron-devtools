@@ -1,85 +1,85 @@
-const path = require('path')
-const fs = require('fs')
-const { app, BrowserWindow, Menu } = require('electron')
-const appMenu = require('./menu')
-const config = require('./config')
-const pkg = require('./package')
+const path = require('path');
+const fs = require('fs');
+const { app, BrowserWindow, Menu } = require('electron');
+const appMenu = require('./menu');
+const config = require('./config');
+const pkg = require('./package');
 
-require('electron-debug')()
-require('electron-context-menu')()
+require('electron-debug')();
+require('electron-context-menu')();
 
 const isDev = typeof process.env.NODE_ENV === 'string'
-  ? (process.env.NODE_ENV === 'development')
-  : require('electron-is-dev')
+    ? (process.env.NODE_ENV === 'development')
+    : require('electron-is-dev');
 
-let mainWindow
-let isQuitting = false
+let mainWindow;
+let isQuitting = false;
 
 // Set title of the app that will use shown in window titlebar
-app.setName(pkg.productName)
+app.setName(pkg.productName);
 
 const isAlreadyRunning = app.makeSingleInstance(() => {
-  if (mainWindow) {
-    if (mainWindow.isMinimized()) {
-      mainWindow.restore()
-    }
+    if (mainWindow) {
+        if (mainWindow.isMinimized()) {
+            mainWindow.restore();
+        }
 
-    mainWindow.show()
-  }
-})
+        mainWindow.show();
+    }
+});
 
 if (isAlreadyRunning) {
-  app.quit()
+    app.quit();
 }
 
-function createMainWindow() {
-  const lastWindowState = config.get('lastWindowState')
+const createMainWindow = () => {
+    const lastWindowState = config.get('lastWindowState');
 
-  const win = new BrowserWindow({
-    title: app.getName(),
-    x: lastWindowState.x,
-    y: lastWindowState.y,
-    width: lastWindowState.width,
-    height: lastWindowState.height
-  })
+    const win = new BrowserWindow({
+        title  : app.getName(),
+        x      : lastWindowState.x,
+        y      : lastWindowState.y,
+        width  : lastWindowState.width,
+        height : lastWindowState.height,
+    });
 
 
-  const url = isDev ? 'http://localhost:4000' : `file://${path.join(__dirname, 'renderer', 'index.html')}`
+    const url = isDev ? 'http://localhost:4000' : `file://${path.join(__dirname, 'renderer', 'index.html')}`;
 
-  win.loadURL(url)
+    win.loadURL(url);
 
-  win.on('close', e => {
-    if (!isQuitting) {
-      e.preventDefault()
+    win.on('close', (e) => {
+        if (!isQuitting) {
+            e.preventDefault();
 
-      if (process.platform === 'darwin') {
-        app.hide()
-      } else {
-        win.hide()
-      }
-    }
-  })
+            if (process.platform === 'darwin') {
+                app.hide();
+            } else {
+                win.hide();
+            }
+        }
+    });
 
-  win.on('page-title-updated', e => {
-    e.preventDefault()
-  })
+    win.on('page-title-updated', (e) => {
+        e.preventDefault();
+    });
 
-  return win
-}
+    return win;
+};
 
 app.on('ready', () => {
-  Menu.setApplicationMenu(appMenu)
-  mainWindow = createMainWindow()
-})
+    Menu.setApplicationMenu(appMenu);
+    mainWindow = createMainWindow();
+});
 
 app.on('activate', () => {
-  mainWindow.show()
-})
+    mainWindow.show();
+});
 
 app.on('before-quit', () => {
-  isQuitting = true
+    isQuitting = true;
 
-  if (!mainWindow.isFullScreen()) {
-    config.set('lastWindowState', mainWindow.getBounds())
-  }
-})
+    if (!mainWindow.isFullScreen()) {
+        config.set('lastWindowState', mainWindow.getBounds());
+    }
+});
