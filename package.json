@@ -34,15 +34,18 @@
     }
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "electron": "^1.6.10",
-    "electron-builder": "^18.0.1",
-    "electron-builder-squirrel-windows": "^18.0.0",
-    "eslint": "^4.5.0",
-    "eslint-config-throrinstudio": "^1.0.0",
-    "node-sass": "^4.5.3",
-    "poi": "^9.3.0-rc.3",
-    "poi-preset-eslint": "^9.0.1",
-    "sass-loader": "^6.0.6"
+    "concurrently": "3.5.0",
+    "electron": "1.6.10",
+    "electron-builder": "18.0.1",
+    "electron-builder-squirrel-windows": "18.0.0",
+    "eslint": "4.5.0",
+    "eslint-config-throrinstudio": "1.0.0",
+    "node-sass": "4.5.3",
+    "poi": "9.3.0-rc.3",
+    "poi-preset-eslint": "9.0.1",
+    "sass-loader": "6.0.6"
+  },
+  "dependencies": {
+    "muse-ui": "2.1.0"
   }
 }
