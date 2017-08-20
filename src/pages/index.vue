@@ -30,6 +30,7 @@
         .content-page {
             height: 100%;
             margin-left: $tpl-left-column-width;
+            overflow: auto;
 
             .page {
                 padding: $title-bar-height 15px 15px 15px;
