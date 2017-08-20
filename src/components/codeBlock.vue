@@ -4,6 +4,7 @@
         <mu-icon-button icon="content_copy"
                         v-on:click="copyAction"
                         v-clipboard="value"
+                        v-tooltip.left="'Copy to Clipboard'"
         />
     </div>
 </template>

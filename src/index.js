@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import MuseUi from 'muse-ui';
 import Clipboard from 'v-clipboard';
+import VTooltip from 'v-tooltip';
 
 import App from './pages/index.vue';
 import router from './router';
@@ -12,6 +13,7 @@ import './stylesheets/style.scss';
 
 Vue.use(MuseUi);
 Vue.use(Clipboard);
+Vue.use(VTooltip);
 
 new Vue({
     router,
