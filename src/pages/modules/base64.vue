@@ -1,6 +1,7 @@
 <template>
-    <div class="base64">
-        Base64
+    <div class="page base64">
+        <h4>Base64</h4>
+
     </div>
 </template>
 

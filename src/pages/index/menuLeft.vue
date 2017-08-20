@@ -1,6 +1,6 @@
 <template>
     <div class="menu-left">
-        <div class="logo">Dev Toolbox</div>
+        <h4 class="logo">Dev Toolbox</h4>
         <mu-list :value="currentRoute" @change="handleChange">
             <mu-list-item v-for="route in routes"
                           :key="route.path"
@@ -42,8 +42,6 @@
         padding-top: $title-bar-height;
 
         .logo {
-            font-weight: $roboto-thin;
-            font-size: 35px;
             text-align: center;
         }
     }

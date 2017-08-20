@@ -21,7 +21,7 @@
     };
 </script>
 
-<style scoped lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss">
     @import "~styles/core";
 
     #app {
@@ -30,6 +30,10 @@
         .content-page {
             height: 100%;
             margin-left: $tpl-left-column-width;
+
+            .page {
+                padding: $title-bar-height 15px 15px 15px;
+            }
         }
     }
 </style>
