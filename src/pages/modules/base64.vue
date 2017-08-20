@@ -10,6 +10,7 @@
             :rowsMax="6"
             fullWidth
             v-model="value"
+            :errorText="error"
         />
         <div class="btn-bar">
             <mu-flat-button label="Encode" v-on:click="encodeAction" secondary/>
@@ -25,22 +26,30 @@
     import infoBlock from '../../components/infoBlock.vue';
 
     export default {
-        name : 'base64',
+        name       : 'base64',
         components : {
             infoBlock,
         },
         data() {
             return {
                 result : null,
-                value : null,
+                value  : null,
+                error  : null,
             };
         },
         methods : {
             encodeAction() {
+                this.error  = null;
                 this.result = btoa(unescape(encodeURIComponent(this.value)));
             },
             decodeAction() {
-                this.result = decodeURIComponent(escape(window.atob(this.value)));
+                try {
+                    this.error  = null;
+                    this.result = null;
+                    this.result = decodeURIComponent(escape(window.atob(this.value)));
+                } catch (e) {
+                    this.error = 'This string is not a correct base64';
+                }
             },
         },
     };
