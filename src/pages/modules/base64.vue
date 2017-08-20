@@ -39,13 +39,26 @@
         },
         methods : {
             encodeAction() {
+                this.result  = null;
+
+                if (!this.value) {
+                    this.error = 'This field is required';
+                    return;
+                }
+
                 this.error  = null;
                 this.result = btoa(unescape(encodeURIComponent(this.value)));
             },
             decodeAction() {
+                this.result = null;
+
+                if (!this.value) {
+                    this.error = 'This field is required';
+                    return;
+                }
+
                 try {
                     this.error  = null;
-                    this.result = null;
                     this.result = decodeURIComponent(escape(window.atob(this.value)));
                 } catch (e) {
                     this.error = 'This string is not a correct base64';
