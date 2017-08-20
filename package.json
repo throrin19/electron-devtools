@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "muse-ui": "2.1.0",
+    "roboto-fontface": "0.8.0",
     "vue-router": "2.7.0"
   }
 }
