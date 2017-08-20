@@ -34,13 +34,18 @@ if (isAlreadyRunning) {
 
 const createMainWindow = () => {
     const lastWindowState = config.get('lastWindowState');
+    const windowState = config.get('windowState');
+
+    console.log(lastWindowState);
 
     const win = new BrowserWindow({
         title         : app.getName(),
         x             : lastWindowState.x,
         y             : lastWindowState.y,
-        width         : lastWindowState.width,
-        height        : lastWindowState.height,
+        width         : windowState.width,
+        height        : windowState.height,
+        minWidth      : windowState.width,
+        minHeight     : windowState.height,
         frame         : false,
     });
 

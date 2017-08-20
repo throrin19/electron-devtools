@@ -36,8 +36,10 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
+    @import "~styles/core";
+
     .title-bar {
-        height: 25px;
+        height: $title-bar-height;
         -webkit-user-select: none;
         -webkit-app-region: drag;
         position: fixed;

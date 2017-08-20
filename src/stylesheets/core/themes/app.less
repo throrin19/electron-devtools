@@ -1,0 +1,42 @@
+@import "~muse-ui/less/vars.less"; // default basic variable
+
+// change defalut basic variable
+
+@primaryColor: @deepPurple500;
+@darkerPrimaryColor: @deepPurple700;
+@lighterPrimaryColor: @deepPurple300;
+@accentColor: @pinkA200;
+@darkerAccentColor: @pinkA400;
+@lighterAccentColor: @pinkA100;
+
+@textColor: @fullWhite;
+@secondaryTextColor: fade(@fullWhite, 70%);
+@alternateTextColor: #303030;
+@borderColor: fade(@fullWhite, 30%);
+@disabledColor: fade(@fullWhite, 30%);
+
+// background
+@backgroundColor: #1e2a36;
+@statusBarBackgroundColor: @fullBlack;
+@appbarBackgroundColor: @grey900;
+@dialogBackgroundColor: #424242; // dialogs or cards
+
+// icon
+@activeIconColor: fade(@fullWhite, 100%);
+@inActiveIconColor: fade(@fullWhite, 50%);
+
+@import "~muse-ui/less/theme-vars.less";  // default component variable
+
+// change the component variable
+@avatarBackgroundColor: lighten(@alternateTextColor, 26%);
+@datePickerHeaderColor: fade(@fullWhite, 12%);
+@timePickerHeaderColor: fade(@fullWhite, 12%);
+@timePickerClockCircleColor: fade(@fullWhite, 12%);
+@avatarBackgroundColor: lighten(@alternateTextColor, 26%);
+@chipColor: lighten(@alternateTextColor, 12%);
+@floatButtonDisabledColor: lighten(@alternateTextColor, 12%);
+
+@tableRowHoverBackgroundColor: fade(@textColor, 10%);
+@tableRowSelectedBackgroundColor: fade(@textColor, 5%);
+
+@import "~muse-ui/less/theme.less"; // style related to theme
