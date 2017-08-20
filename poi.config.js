@@ -5,7 +5,8 @@ module.exports = {
     entry : 'src/index.js',
     dist  : 'app/renderer',
     html  : {
-        title : appPkg.productName,
+        title    : appPkg.productName,
+        template : 'index.ejs',
     },
     // In production mode
     // Electron can only load from relative path
