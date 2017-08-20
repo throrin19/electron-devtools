@@ -1,7 +1,7 @@
 <template>
     <div class="page base64">
         <info-block icon="info_outline">
-            Vous pouvez encoder la String que vous voulez en base64 ou bien décodé une String base64.
+            Vous pouvez encoder la String que vous voulez en base64 ou bien décoder une String base64.
         </info-block>
         <mu-text-field
             hintText="Texte ou base64"
