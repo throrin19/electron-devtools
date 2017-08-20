@@ -2,6 +2,9 @@
     <div id="app">
         <title-bar/>
         <menu-left/>
+        <div class="content-page">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 
@@ -23,5 +26,10 @@
 
     #app {
         height: 100%;
+
+        .content-page {
+            height: 100%;
+            margin-left: $tpl-left-column-width;
+        }
     }
 </style>

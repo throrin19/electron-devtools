@@ -1,12 +1,33 @@
 <template>
     <div class="menu-left">
         <div class="logo">Dev Toolbox</div>
+        <mu-list :value="currentRoute" @change="handleChange">
+            <mu-list-item v-for="route in routes"
+                          :key="route.path"
+                          :title="route.name"
+                          @click="$router.push(route.path)"
+                          :value="route.path">
+            </mu-list-item>
+        </mu-list>
     </div>
 </template>
 
 <script>
+    import { routes } from '../../router';
+
     export default {
         name : 'menuLeft',
+        data() {
+            return {
+                currentRoute : this.$router.currentRoute.path,
+                routes,
+            };
+        },
+        methods : {
+            handleChange() {
+                this.currentRoute = this.$router.currentRoute.path;
+            },
+        },
     };
 </script>
 
