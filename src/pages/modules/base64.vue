@@ -78,9 +78,5 @@
         .btn-bar {
             text-align: right;
         }
-
-        .result {
-            word-wrap: break-word;
-        }
     }
 </style>
