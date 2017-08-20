@@ -17,18 +17,21 @@
             <mu-flat-button label="Decode" v-on:click="decodeAction" secondary/>
         </div>
         <div class="result" v-if="result">
-            {{ result }}
+            <h5>Result</h5>
+            <code-block :value="result"></code-block>
         </div>
     </div>
 </template>
 
 <script>
     import infoBlock from '../../components/infoBlock.vue';
+    import codeBlock from '../../components/codeBlock.vue';
 
     export default {
         name       : 'base64',
         components : {
             infoBlock,
+            codeBlock,
         },
         data() {
             return {
