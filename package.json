@@ -48,6 +48,7 @@
     "sass-loader": "6.0.6"
   },
   "dependencies": {
+    "jsoneditor": "5.9.4",
     "muse-ui": "2.1.0",
     "roboto-fontface": "0.8.0",
     "v-clipboard": "1.0.4",
