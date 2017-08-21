@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 import Home from './pages/modules/home.vue';
 import Base64 from './pages/modules/base64.vue';
 import Hash from './pages/modules/hash.vue';
+import Json from './pages/modules/json.vue';
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,11 @@ const routes = [
         path        : '/hash',
         component   : Hash,
         name        : 'String Hash',
+    },
+    {
+        path        : '/json',
+        component   : Json,
+        name        : 'JSON Viewer',
     },
 ];
 
