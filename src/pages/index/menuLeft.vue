@@ -39,7 +39,7 @@
         float: left;
         height: 100%;
         background-color: $tpl-left-column-background-color;
-        padding-top: $title-bar-height;
+        // padding-top: $title-bar-height;
 
         .logo {
             text-align: center;

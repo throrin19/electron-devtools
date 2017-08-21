@@ -46,7 +46,7 @@ const createMainWindow = () => {
         height        : windowState.height,
         minWidth      : windowState.width,
         minHeight     : windowState.height,
-        frame         : false,
+        // frame         : false,
     });
 
 

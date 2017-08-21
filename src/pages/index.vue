@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <title-bar/>
+        <!--<title-bar/>-->
         <menu-left/>
         <div class="content-page">
             <router-view></router-view>
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-    import titleBar from '../components/titleBar.vue';
+    // import titleBar from '../components/titleBar.vue';
     import menuLeft from './index/menuLeft.vue';
 
     export default {
         namr        : 'App',
         components  : {
-            titleBar,
+            // titleBar,
             menuLeft,
         },
     };
@@ -33,7 +33,7 @@
             overflow: auto;
 
             .page {
-                padding: $title-bar-height 15px 15px 15px;
+                padding: 15px 15px 15px 15px;
             }
         }
     }
