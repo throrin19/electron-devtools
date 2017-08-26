@@ -46,6 +46,7 @@
         methods : {
             parseAction() {
                 this.result = null;
+                this.error  = null;
 
                 if (!this.value) {
                     this.error = 'This field is required';
