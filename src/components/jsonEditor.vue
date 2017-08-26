@@ -9,7 +9,7 @@
     export default {
         name  : 'jsonEditor',
         props : {
-            value : Object,
+            value   : Object,
             options : {
                 type    : Object,
                 default() {

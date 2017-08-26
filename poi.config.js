@@ -1,5 +1,6 @@
-const appPkg = require('./app/package');
-const path   = require('path');
+const appPkg  = require('./app/package');
+const path    = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry : 'src/index.js',
@@ -14,6 +15,9 @@ module.exports = {
     // Exclude built-in Electron modules from bundle
     webpack(config) {
         config.target = 'electron-renderer';
+
+        config.plugins.push(new webpack.IgnorePlugin(/async|compile/, /ajv/));
+
         return config;
     },
     extendWebpack(config) {
