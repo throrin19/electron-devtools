@@ -1,24 +1,37 @@
 <template>
-    <div class="page json">
+    <div class="json">
         <info-block icon="info_outline">
             You can parse a jsonString and explore this easilly.
         </info-block>
-        <mu-text-field
-            hintText="String to hash"
-            multiLine
-            :rows="3"
-            :rowsMax="6"
-            fullWidth
-            v-model="value"
-            :errorText="error"
-        />
-        <div class="btn-bar">
-            <mu-flat-button label="Parse" v-on:click="parseAction" secondary/>
-        </div>
-        <div class="result" v-if="result">
-            <h5>Result</h5>
-            <json-editor :options="options" :value="result"></json-editor>
-        </div>
+        <v-container grid-list-lg>
+            <v-layout row wrap>
+                <v-flex xs12>
+                    <v-card>
+                        <v-card-title>
+                            <v-text-field
+                                label="JSON to pase"
+                                v-model="value"
+                                :error="error !== null"
+                                :error-messages="error ? [ error ] : []"
+                                multi-line
+                                dark
+                            ></v-text-field>
+                        </v-card-title>
+                        <v-card-actions>
+                            <v-btn flat class="blue--text" v-on:click="parseAction">Parse</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">Result</div>
+                        </v-card-title>
+                        <json-editor :options="options" :value="result"></json-editor>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 

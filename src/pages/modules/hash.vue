@@ -1,37 +1,80 @@
 <template>
-    <div class="page hash">
+    <div class="hash">
         <info-block icon="info_outline">
             String Hash is just a tool to generate cryptographics hash code from a string.
             It support most used command hash functions like MD5, SHA-1, SHA-256, ...
         </info-block>
-        <mu-text-field
-            hintText="String to hash"
-            multiLine
-            :rows="3"
-            :rowsMax="6"
-            fullWidth
-            v-model="value"
-            :errorText="error"
-        />
-        <div class="btn-bar">
-            <mu-flat-button label="Hash" v-on:click="hashAction" secondary/>
-        </div>
-        <div class="result" v-if="result">
-            <h5>Result</h5>
-
-
-
-            <h6>MD5</h6>
-            <code-block :value="result.md5"></code-block>
-            <h6>SHA-1</h6>
-            <code-block :value="result.sha1"></code-block>
-            <h6>SHA-256</h6>
-            <code-block :value="result.sha256"></code-block>
-            <h6>SHA-512</h6>
-            <code-block :value="result.sha512"></code-block>
-            <h6>RIPEMD-160</h6>
-            <code-block :value="result.rmd160"></code-block>
-        </div>
+        <v-container grid-list-lg>
+            <v-layout row wrap>
+                <v-flex xs12>
+                    <v-card>
+                        <v-card-title>
+                            <v-text-field
+                                label="String to hash"
+                                v-model="value"
+                                :error="error !== null"
+                                :error-messages="error ? [ error ] : []"
+                                multi-line
+                                dark
+                            ></v-text-field>
+                        </v-card-title>
+                        <v-card-actions>
+                            <v-btn flat class="blue--text" v-on:click="hashAction">Hash</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">MD5</div>
+                        </v-card-title>
+                        <v-card-text>
+                            <code-block :value="result.md5"></code-block>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">SHA-1</div>
+                        </v-card-title>
+                        <v-card-text>
+                            <code-block :value="result.sha1"></code-block>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">SHA-256</div>
+                        </v-card-title>
+                        <v-card-text>
+                            <code-block :value="result.sha256"></code-block>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">SHA-512</div>
+                        </v-card-title>
+                        <v-card-text>
+                            <code-block :value="result.sha512"></code-block>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">RIPEMD-160</div>
+                        </v-card-title>
+                        <v-card-text>
+                            <code-block :value="result.rmd160"></code-block>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 

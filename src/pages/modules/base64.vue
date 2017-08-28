@@ -1,25 +1,40 @@
 <template>
-    <div class="page base64">
+    <div class="base64">
         <info-block icon="info_outline">
             Vous pouvez encoder la String que vous voulez en base64 ou bien décoder une String base64.
         </info-block>
-        <mu-text-field
-            hintText="Texte ou base64"
-            multiLine
-            :rows="3"
-            :rowsMax="6"
-            fullWidth
-            v-model="value"
-            :errorText="error"
-        />
-        <div class="btn-bar">
-            <mu-flat-button label="Encode" v-on:click="encodeAction" secondary/>
-            <mu-flat-button label="Decode" v-on:click="decodeAction" secondary/>
-        </div>
-        <div class="result" v-if="result">
-            <h5>Result</h5>
-            <code-block :value="result"></code-block>
-        </div>
+        <v-container grid-list-lg>
+            <v-layout row wrap>
+                <v-flex xs12>
+                    <v-card>
+                        <v-card-title>
+                            <v-text-field
+                                label="Text or Base64"
+                                v-model="value"
+                                :error="error !== null"
+                                :error-messages="error ? [ error ] : []"
+                                multi-line
+                                dark
+                            ></v-text-field>
+                        </v-card-title>
+                        <v-card-actions>
+                            <v-btn flat class="blue--text" v-on:click="encodeAction">Encode</v-btn>
+                            <v-btn flat class="blue--text" v-on:click="decodeAction">Decode</v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+                <v-flex xs12>
+                    <v-card class="result" v-if="result">
+                        <v-card-title>
+                            <div class="headline">Result</div>
+                        </v-card-title>
+                        <v-card-text>
+                            <code-block :value="result"></code-block>
+                        </v-card-text>
+                    </v-card>
+                </v-flex>
+            </v-layout>
+        </v-container>
     </div>
 </template>
 
@@ -53,6 +68,7 @@
                 this.result = btoa(unescape(encodeURIComponent(this.value)));
             },
             decodeAction() {
+                console.log('decode');
                 this.result = null;
 
                 if (!this.value) {

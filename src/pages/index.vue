@@ -1,40 +1,33 @@
 <template>
-    <div id="app">
-        <!--<title-bar/>-->
-        <menu-left/>
-        <div class="content-page">
+    <v-app
+        height="415px"
+        dark
+        id="app"
+        standalone
+    >
+        <drawer></drawer>
+        <toolbar></toolbar>
+        <main>
             <router-view></router-view>
-        </div>
-    </div>
+        </main>
+    </v-app>
 </template>
 
 <script>
-    // import titleBar from '../components/titleBar.vue';
-    import menuLeft from './index/menuLeft.vue';
+    import toolbar from './index/toolbar.vue';
+    import drawer from './index/drawer.vue';
 
     export default {
         namr        : 'App',
         components  : {
+            toolbar,
+            drawer,
             // titleBar,
-            menuLeft,
+            // menuLeft,
         },
     };
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-    @import "~styles/core";
 
-    #app {
-        height: 100%;
-
-        .content-page {
-            height: 100%;
-            margin-left: $tpl-left-column-width;
-            overflow: auto;
-
-            .page {
-                padding: 15px 15px 15px 15px;
-            }
-        }
-    }
 </style>

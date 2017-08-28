@@ -1,6 +1,6 @@
 <template>
     <div class="info-block valign-wrapper">
-        <mu-icon :size="25" :value="icon" v-if="icon"></mu-icon>
+        <v-icon class="pr-2" v-if="icon">{{ icon }}</v-icon>
         <div class="message-content">
             <slot></slot>
         </div>
@@ -27,12 +27,7 @@
     @import "~styles/core";
 
     .info-block {
-        padding: 10px;
-        border-left: 5px solid color('grey', 'base');
-        margin-bottom: 20px;
-
-        .mu-icon + .message-content {
-            padding-left: 10px;
-        }
+        padding: 15px;
+        background-color: color('grey', 'darken-4');
     }
 </style>
