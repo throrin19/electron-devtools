@@ -42,16 +42,16 @@
         width: 100%;
 
         .jsoneditor {
-            border: 1px solid color('g-deep-blue', 'lighten-1');
-            background-color: color('g-deep-blue', 'lighten-3');
+            border: 1px solid color('grey', 'darken-3');
+            background-color: color('grey', 'darken-3');
 
             .jsoneditor-menu {
-                background-color: color('g-deep-blue', 'lighten-1');
-                border-bottom-color: color('g-deep-blue', 'lighten-1');
+                background-color: color('grey', 'darken-4');
+                border-bottom-color: color('grey', 'darken-4');
             }
 
             div.jsoneditor-readonly {
-                color: color('g-deep-blue', 'base');
+                color: color('grey', 'base');
             }
 
             div.jsoneditor-field,
@@ -65,7 +65,7 @@
 
             div.jsoneditor-value.jsoneditor-object,
             div.jsoneditor-value.jsoneditor-array {
-                color: color('g-deep-blue', 'base');
+                color: color('grey', 'darken-1');
             }
 
             div.jsoneditor-value.jsoneditor-boolean {

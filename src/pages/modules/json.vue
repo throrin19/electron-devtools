@@ -24,9 +24,6 @@
                 </v-flex>
                 <v-flex xs12>
                     <v-card class="result" v-if="result">
-                        <v-card-title>
-                            <div class="headline">Result</div>
-                        </v-card-title>
                         <json-editor :options="options" :value="result"></json-editor>
                     </v-card>
                 </v-flex>
