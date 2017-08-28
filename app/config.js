@@ -4,11 +4,11 @@ module.exports = new Config({
     defaults : {
         lastWindowState : {
             width  : 1000,
-            height : 800,
+            height : 700,
         },
         windowState : {
             width  : 1000,
-            height : 800,
+            height : 700,
         },
     },
 });

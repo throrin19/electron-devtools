@@ -36,19 +36,16 @@ const createMainWindow = () => {
     const lastWindowState = config.get('lastWindowState');
     const windowState = config.get('windowState');
 
-    console.log(lastWindowState);
-
     const win = new BrowserWindow({
         title         : app.getName(),
         x             : lastWindowState.x,
         y             : lastWindowState.y,
-        width         : windowState.width,
-        height        : windowState.height,
-        minWidth      : windowState.width,
-        minHeight     : windowState.height,
+        width         : 1000,
+        height        : 700,
+        minWidth      : 1000,
+        minHeight     : 700,
         // frame         : false,
     });
-
 
     const url = isDev ? 'http://localhost:4000' : `file://${path.join(__dirname, 'renderer', 'index.html')}`;
 
