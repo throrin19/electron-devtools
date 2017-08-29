@@ -29,5 +29,12 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-
+    main {
+        position: absolute;
+        right: 0;
+        top: 64px;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+    }
 </style>
