@@ -20,7 +20,7 @@ const routes = [
         path        : '/base64',
         component   : Base64,
         name        : 'Base64',
-        icon        : 'format_bold',
+        icon        : 'tb-file-swap',
     },
     {
         path        : '/hash',
@@ -32,7 +32,7 @@ const routes = [
         path        : '/json',
         component   : Json,
         name        : 'JSON Viewer',
-        icon        : 'developer_mode',
+        icon        : 'tb-file-new',
     },
 ];
 

@@ -6,7 +6,7 @@ import Clipboard from 'v-clipboard';
 import App from './pages/index.vue';
 import router from './router';
 
-import 'roboto-fontface/css/roboto/roboto-fontface.css';
+// import 'roboto-fontface/css/roboto/roboto-fontface.css';
 import 'vuetify/dist/vuetify.min.css';
 import './stylesheets/style.scss';
 
