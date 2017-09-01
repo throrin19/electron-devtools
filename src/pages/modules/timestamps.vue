@@ -28,6 +28,10 @@
                                 :error="error !== null"
                                 :error-messages="error ? [ error ] : []"
                             ></v-text-field>
+                            <div v-if="item === 'human'">
+                                <date-picker label="Date"></date-picker>
+                                <time-picker label="time"></time-picker>
+                            </div>
                         </v-card-text>
                         <v-card-actions>
                             <v-btn flat primary v-on:click="parseAction">Parse</v-btn>
@@ -67,12 +71,16 @@
     import moment from 'moment';
     import infoBlock from '../../components/infoBlock.vue';
     import codeBlock from '../../components/codeBlock.vue';
+    import datePicker from '../../components/datePicker.vue';
+    import timePicker from '../../components/timePicker.vue';
 
     export default {
         name        : 'timestamps',
         components  : {
             infoBlock,
             codeBlock,
+            datePicker,
+            timePicker,
         },
         data() {
             return {
@@ -83,9 +91,10 @@
                     { value : 'human', text : 'Human readable' },
                     { value : 'iso', text : 'ISO 8601' },
                 ],
-                unixValue : new Date().getTime() / 1000,
-                isoValue  : new Date().toISOString(),
-                error     : null,
+                unixValue  : new Date().getTime() / 1000,
+                isoValue   : new Date().toISOString(),
+                humanValue : moment(),
+                error      : null,
             };
         },
         methods : {
@@ -108,6 +117,15 @@
                     }
 
                     this.result = moment(this.isoValue);
+                    return;
+                }
+
+                if (this.item === 'human') {
+                    if (!this.humanValue) {
+                        this.error = 'This value is required';
+                    }
+
+                    this.result = this.humanValue;
                     return;
                 }
             },

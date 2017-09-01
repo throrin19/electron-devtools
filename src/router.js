@@ -39,7 +39,7 @@ const routes = [
         path        : '/timestamps',
         component   : Timestamps,
         name        : 'Timestamps',
-        icon        : 'timelapse',
+        icon        : 'schedule',
     },
 ];
 
