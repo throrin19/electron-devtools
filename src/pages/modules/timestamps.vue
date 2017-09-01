@@ -29,8 +29,8 @@
                                 :error-messages="error ? [ error ] : []"
                             ></v-text-field>
                             <div v-if="item === 'human'">
-                                <date-picker label="Date"></date-picker>
-                                <time-picker label="time"></time-picker>
+                                <date-picker label="Date" v-model="humanPickersValue.date"></date-picker>
+                                <time-picker label="Time" v-model="humanPickersValue.time"></time-picker>
                             </div>
                         </v-card-text>
                         <v-card-actions>
@@ -91,10 +91,14 @@
                     { value : 'human', text : 'Human readable' },
                     { value : 'iso', text : 'ISO 8601' },
                 ],
-                unixValue  : new Date().getTime() / 1000,
-                isoValue   : new Date().toISOString(),
-                humanValue : moment(),
-                error      : null,
+                unixValue         : new Date().getTime() / 1000,
+                isoValue          : new Date().toISOString(),
+                humanValue        : moment(),
+                error             : null,
+                humanPickersValue : {
+                    date : moment().format('YYYY-MM-DD'),
+                    time : moment().format('LT'),
+                },
             };
         },
         methods : {
@@ -128,6 +132,14 @@
                     this.result = this.humanValue;
                     return;
                 }
+            },
+        },
+        watch : {
+            humanPickersValue : {
+                handler(value) {
+                    this.humanValue = moment(`${value.date} ${value.time}`, 'YYYY-MM-DD hh:mm a A');
+                },
+                deep : true,
             },
         },
     };

@@ -15,8 +15,8 @@
         <v-time-picker v-model="inputValue" scrollable dark >
             <template scope="{ save, cancel }">
                 <v-card-actions>
-                    <v-btn flat primary v-on:click.native="cancel()">Cancel</v-btn>
-                    <v-btn flat primary v-on:click.native="save()">Save</v-btn>
+                    <v-btn flat primary v-on:click="cancel">Cancel</v-btn>
+                    <v-btn flat primary v-on:click="saveDialog">Save</v-btn>
                 </v-card-actions>
             </template>
         </v-time-picker>
@@ -37,10 +37,7 @@
             };
         },
         methods : {
-            cancel() {
-                this.modal = false;
-            },
-            save() {
+            saveDialog() {
                 this.modal = false;
                 this.$emit('change', this.inputValue);
                 this.$emit('input', this.inputValue);
