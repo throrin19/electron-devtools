@@ -7,7 +7,7 @@ import App from './pages/index.vue';
 import router from './router';
 
 // import 'roboto-fontface/css/roboto/roboto-fontface.css';
-import 'vuetify/dist/vuetify.min.css';
+import './stylesheets/vuetify.styl';
 import './stylesheets/style.scss';
 
 Vue.use(Clipboard);

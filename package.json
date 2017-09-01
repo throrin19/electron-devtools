@@ -35,26 +35,28 @@
   },
   "devDependencies": {
     "concurrently": "3.5.0",
-    "electron": "1.6.10",
-    "electron-builder": "18.0.1",
-    "electron-builder-squirrel-windows": "18.0.0",
+    "electron": "1.7.5",
+    "electron-builder": "19.27.3",
+    "electron-builder-squirrel-windows": "19.27.3",
     "eslint": "4.5.0",
     "eslint-config-throrinstudio": "1.0.0",
     "less": "2.7.2",
     "less-loader": "4.0.5",
     "node-sass": "4.5.3",
-    "poi": "9.3.0-rc.3",
+    "poi": "9.3.3",
     "poi-preset-eslint": "9.0.1",
-    "sass-loader": "6.0.6"
+    "sass-loader": "6.0.6",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.1"
   },
   "dependencies": {
-    "jsoneditor": "5.9.4",
+    "jsoneditor": "5.9.5",
     "lodash": "4.17.4",
+    "moment": "2.18.1",
     "muse-ui": "2.1.0",
     "roboto-fontface": "0.8.0",
     "v-clipboard": "1.0.4",
-    "v-tooltip": "2.0.0-beta.8",
     "vue-router": "2.7.0",
-    "vuetify": "0.15.0-beta.3"
+    "vuetify": "0.15.0-beta.5"
   }
 }

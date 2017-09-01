@@ -19,7 +19,7 @@
                             ></v-text-field>
                         </v-card-title>
                         <v-card-actions>
-                            <v-btn flat class="blue--text" v-on:click="hashAction">Hash</v-btn>
+                            <v-btn flat primary v-on:click="hashAction">Hash</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-flex>

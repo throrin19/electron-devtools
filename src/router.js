@@ -6,6 +6,7 @@ import Home from './pages/modules/home.vue';
 import Base64 from './pages/modules/base64.vue';
 import Hash from './pages/modules/hash.vue';
 import Json from './pages/modules/json.vue';
+import Timestamps from './pages/modules/timestamps.vue';
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,12 @@ const routes = [
         component   : Json,
         name        : 'JSON Viewer',
         icon        : 'tb-file-new',
+    },
+    {
+        path        : '/timestamps',
+        component   : Timestamps,
+        name        : 'Timestamps',
+        icon        : 'timelapse',
     },
 ];
 

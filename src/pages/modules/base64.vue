@@ -18,8 +18,8 @@
                             ></v-text-field>
                         </v-card-title>
                         <v-card-actions>
-                            <v-btn flat class="blue--text" v-on:click="encodeAction">Encode</v-btn>
-                            <v-btn flat class="blue--text" v-on:click="decodeAction">Decode</v-btn>
+                            <v-btn flat primary v-on:click="encodeAction">Encode</v-btn>
+                            <v-btn flat primary v-on:click="decodeAction">Decode</v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-flex>
