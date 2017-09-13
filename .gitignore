@@ -6,3 +6,4 @@ package-lock.json
 app/package-log.json
 .idea/
 app/renderer/
+.vscode
