@@ -7,6 +7,7 @@ import Base64 from './pages/modules/base64.vue';
 import Hash from './pages/modules/hash.vue';
 import Json from './pages/modules/json.vue';
 import Timestamps from './pages/modules/timestamps.vue';
+import ObjectId from './pages/modules/objectId.vue';
 
 Vue.use(VueRouter);
 
@@ -41,6 +42,12 @@ const routes = [
         name        : 'Timestamps',
         icon        : 'schedule',
     },
+    {
+        path        : '/objectid',
+        component   : ObjectId,
+        name        : 'ObjectId Timestamp',
+        icon        : 'tb-server',
+    },
 ];
 
 export const menu = omit(routes, 'component');
@@ -49,4 +56,3 @@ export default new VueRouter({
     mode : 'history',
     routes,
 });
-
