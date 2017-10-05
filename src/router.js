@@ -8,6 +8,7 @@ import Hash from './pages/modules/hash.vue';
 import Json from './pages/modules/json.vue';
 import Timestamps from './pages/modules/timestamps.vue';
 import ObjectId from './pages/modules/objectId.vue';
+import Ms from './pages/modules/ms.vue';
 
 Vue.use(VueRouter);
 
@@ -47,6 +48,12 @@ const routes = [
         component   : ObjectId,
         name        : 'ObjectId Timestamp',
         icon        : 'tb-server',
+    },
+    {
+        path        : '/ms',
+        component   : Ms,
+        name        : 'Millisecond Converter',
+        icon        : 'timer_10',
     },
 ];
 

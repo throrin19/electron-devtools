@@ -53,6 +53,7 @@
     "jsoneditor": "5.9.5",
     "lodash": "4.17.4",
     "moment": "2.18.1",
+    "ms": "2.0.0",
     "muse-ui": "2.1.0",
     "roboto-fontface": "0.8.0",
     "v-clipboard": "1.0.4",
