@@ -1,7 +1,7 @@
 {
   "name": "electron-toolbox",
-  "productName": "Electron-toolbox",
-  "version": "0.0.0",
+  "productName": "Toolbox",
+  "version": "0.1.0",
   "description": "Many developpers tools in one electron app. Like a toolbox",
   "author": {
     "name": "throrin19",

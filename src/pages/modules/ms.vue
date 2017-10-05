@@ -1,7 +1,8 @@
 <template>
     <div class="ms">
         <info-block icon="info_outline">
-            Permet de convertir n'importe quelle durée en milliseconde. Utilisation de la library ms.
+            Allows you to convert any length of time in milliseconds. Using the ms library.
+            Example: "1 hour" will give 3600000 milliseconds
         </info-block>
         <v-container grid-list-lg>
             <v-layout row wrap>

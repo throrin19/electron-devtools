@@ -1,7 +1,7 @@
 <template>
     <div class="timestamps">
         <info-block icon="info_outline">
-            Ici vous pouvez saisir une date selon l'un des formats disponibles pour la convertir dans tous les autres formats. Contient la date actuelle par défaut.
+            Here you can enter a date in one of the available formats to convert it to any other format. Contains the current default date.
         </info-block>
         <v-container grid-list-lg>
             <v-layout row wrap>

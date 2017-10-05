@@ -1,7 +1,7 @@
 <template>
     <div class="base64">
         <info-block icon="info_outline">
-            Vous pouvez encoder la String que vous voulez en base64 ou bien décoder une String base64.
+            You can either encode the String you want to base64 or decode a base64 String.
         </info-block>
         <v-container grid-list-lg>
             <v-layout row wrap>
