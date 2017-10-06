@@ -73,15 +73,21 @@
             }
 
             div.jsoneditor-value.jsoneditor-number {
-                color : color('red', 'darken-4');
+                color : color('red', 'accent-2');
             }
 
+            div.jsoneditor-value.jsoneditor-url,
+            a.jsoneditor-value.jsoneditor-url,
             div.jsoneditor-value.jsoneditor-string {
                 color: color('green', 'accent-4');
             }
 
             div.jsoneditor-value.jsoneditor-null {
-                color: color('blue', 'darken-4');
+                color: color('blue', 'accent-2');
+            }
+
+            div.jsoneditor-field {
+              color: color('shades', 'white');
             }
         }
     }
