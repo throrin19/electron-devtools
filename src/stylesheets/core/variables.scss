@@ -1,0 +1,126 @@
+// 1. Global
+// ==========================================================================
+
+// Media Query Ranges
+$small-screen-up                                                : 601px !default;
+$medium-screen-up                                               : 993px !default;
+$large-screen-up                                                : 1201px !default;
+$small-screen                                                   : 600px !default;
+$medium-screen                                                  : 992px !default;
+$large-screen                                                   : 1200px !default;
+
+$medium-and-up                                                  : "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up                                                   : "only screen and (min-width : #{$medium-screen-up})" !default;
+$small-and-down                                                 : "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down                                                : "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only                                                    : "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+// Disabled styles
+$button-disabled-background                                     : #DFDFDF !default;
+$button-disabled-color                                          : #9F9F9F !default;
+
+// 2. Refonte Muse-UI
+// ==========================================================================
+$mu-text-field-help-font-size                                   : 10px;
+$mu-text-field-help-line-height                                 : $mu-text-field-help-font-size;
+$mu-text-field-help-icon-size                                   : 16px;
+$mu-text-field-help-margin-top                                  : 6px;
+$mu-text-field-font-size                                        : 13px;
+$mu-text-field-min-height                                       : 73px;
+$mu-text-field-icon-top                                         : 25px;
+$mu-text-field-content-padding-top                              : 20px;
+$mu-text-field-input-height                                     : 28px;
+$mu-text-field-label-top                                        : 8px;
+$mu-text-field-label-float-top                                  : -2px;
+
+// 3. Grid
+// ==========================================================================
+
+$num-cols                                                       : 12 !default;
+$gutter-width                                                   : 1.5rem !default;
+$element-top-margin                                             : $gutter-width/3 !default;
+$element-bottom-margin                                          : ($gutter-width*2)/3 !default;
+
+// 4. Roboto Font-weight
+// ==========================================================================
+$roboto-thin                                                    : 200;
+$roboto-light                                                   : 300;
+$roboto-regular                                                 : 400;
+$roboto-medium                                                  : 500;
+$roboto-bold                                                    : 700;
+
+// 5. Typography
+// ==========================================================================
+
+$off-black                                                      : rgba(0, 0, 0, 0.87) !default;
+// Header Styles
+$h1-fontsize                                                    : 4.2rem !default;
+$h2-fontsize                                                    : 3.56rem !default;
+$h3-fontsize                                                    : 2.92rem !default;
+$h4-fontsize                                                    : 2.28rem !default;
+$h5-fontsize                                                    : 1.64rem !default;
+$h6-fontsize                                                    : 1rem !default;
+
+
+// 6. Flow Text
+// ==========================================================================
+
+$range                                                          : $large-screen - $small-screen !default;
+$intervals                                                      : 20 !default;
+$interval-size                                                  : $range / $intervals !default;
+
+
+// 7. Contextual colors
+// ==========================================================================
+$disabled-background-color                                      : $button-disabled-background;
+$disabled-text-color                                            : $button-disabled-color;
+$contextual-level-primary                                       : 'darken-3';
+$contextual-level-secondary                                     : 'lighten-5';
+$info-color-primary                                             : color('blue', $contextual-level-primary);
+$info-color-secondary                                           : color('blue', $contextual-level-secondary);
+$success-color-primary                                          : color('green', $contextual-level-primary);
+$success-color-secondary                                        : color('green', $contextual-level-secondary);
+$danger-color-primary                                           : color('red', $contextual-level-primary);
+$danger-color-secondary                                         : color('red', $contextual-level-secondary);
+$warning-color-primary                                          : color('yellow', $contextual-level-primary);
+$warning-color-secondary                                        : color('yellow', $contextual-level-secondary);
+$default-color-primary                                          : color('grey', $contextual-level-primary);
+$default-color-secondary                                        : color('grey', $contextual-level-secondary);
+
+// 8. Table
+// ==========================================================================
+$table-border-color                                             : #d0d0d0 !default;
+$table-striped-color                                            : #f2f2f2 !default;
+$table-actions-width                                            : 100px;
+$table-th-padding                                               : 10px;
+$table-th-font-size                                             : 12px;
+$table-th-font-weight                                           : $roboto-medium;
+$table-tr-even-background                                       : color('grey', 'lighten-4');
+$table-tr-odd-background                                        : color('grey', 'lighten-5');
+$table-tr-border                                                : 3px transparent solid;
+$table-td-padding                                               : 15px 20px;
+$table-td-font-size                                             : 12px;
+$table-td-font-weight                                           : $roboto-regular;
+
+// 9. Chips
+// ===========================================================================
+$chip-height                                                    : 32px;
+$chip-background-color                                          : color('grey', 'lighten-2');
+$chip-font-size                                                 : 13px;
+
+// 10. Tooltip
+// ===========================================================================
+$tooltip-background-color                                       : color('g-deep-blue', 'base');
+$tooltip-text-color                                             : color('shades', 'white');
+$tooltip-height                                                 : 35px;
+$tooltip-padding                                                : 0 15px;
+$tooltip-font-size                                              : 12px;
+
+// 11. Base template
+// ===========================================================================
+$tpl-left-column-width                                          : 250px;
+$tpl-left-column-background-color                               : color('deep-purple', 'base');
+
+// 12. titlebar
+// ===========================================================================
+$title-bar-height                                               : 25px;

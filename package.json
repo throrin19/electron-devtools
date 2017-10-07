@@ -2,23 +2,24 @@
   "private": true,
   "name": "electron-toolbox",
   "description": "Many developpers tools in one electron app. Like a toolbox",
-  "version": "0.0.0-this-does-not-matter",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "postinstall": "cd app && npm install && rm -rf package-lock.json",
     "test": "echo lol",
-    "build": "poi build",
-    "dev": "poi",
+    "build": "npx poi build",
+    "dev": "npx poi",
     "both": "concurrently \"npm run dev\" \"npm run app\" -k",
     "app": "electron app/index.js",
     "dist": "npm run dist:mac && npm run dist:deb && npm run dist:win",
+    "dist:travis": "npm run dist:deb && npm run dist:win",
     "dist:mac": "build --mac",
-    "dist:linux": "build --linux deb tar.xz",
-    "dist:win": "build --win --ia32"
+    "dist:deb": "build --linux deb tar.xz",
+    "dist:win": "build --win --x64"
   },
   "build": {
     "appId": "com.throrin19.electron-toolbox",
-    "productName": "Electron-toolbox",
+    "productName": "Toolbox",
     "asar": true,
     "mac": {
       "category": "public.app-category.developer-tools"
@@ -34,9 +35,30 @@
     }
   },
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "electron": "^1.6.10",
-    "electron-builder": "^18.0.1",
-    "electron-builder-squirrel-windows": "^18.0.0"
+    "concurrently": "3.5.0",
+    "electron": "1.7.5",
+    "electron-builder": "19.27.3",
+    "electron-builder-squirrel-windows": "19.27.3",
+    "eslint": "4.5.0",
+    "eslint-config-throrinstudio": "1.0.0",
+    "less": "2.7.2",
+    "less-loader": "4.0.5",
+    "node-sass": "4.5.3",
+    "poi": "9.3.3",
+    "poi-preset-eslint": "9.0.1",
+    "sass-loader": "6.0.6",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.1"
+  },
+  "dependencies": {
+    "jsoneditor": "5.9.5",
+    "lodash": "4.17.4",
+    "moment": "2.18.1",
+    "ms": "2.0.0",
+    "muse-ui": "2.1.0",
+    "roboto-fontface": "0.8.0",
+    "v-clipboard": "1.0.4",
+    "vue-router": "2.7.0",
+    "vuetify": "0.15.0-beta.5"
   }
 }

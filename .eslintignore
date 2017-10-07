@@ -1,0 +1,6 @@
+build/*.js
+config/*.js
+
+# ignore les modules node
+node_modules
+app/node_modules

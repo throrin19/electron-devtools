@@ -5,3 +5,6 @@ app/node_modules
 package-lock.json
 app/package-log.json
 .idea/
+app/renderer/
+.vscode
+dist/
