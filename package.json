@@ -14,7 +14,7 @@
     "dist": "npm run dist:mac && npm run dist:deb && npm run dist:win",
     "dist:mac": "build --mac",
     "dist:deb": "build --linux deb tar.xz",
-    "dist:win": "build --win --ia32"
+    "dist:win": "build --win --x64"
   },
   "build": {
     "appId": "com.throrin19.electron-toolbox",

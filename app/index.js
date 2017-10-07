@@ -3,7 +3,7 @@ const fs = require('fs');
 const { app, BrowserWindow, Menu } = require('electron');
 const appMenu = require('./menu');
 const config = require('./config');
-const pkg = require('./package');
+const pkg = require('./package.json');
 
 require('electron-debug')();
 require('electron-context-menu')();
@@ -37,6 +37,7 @@ const createMainWindow = () => {
     const windowState = config.get('windowState');
 
     const win = new BrowserWindow({
+        icon          : `${path.join(__dirname, 'icon.png')}`,
         title         : app.getName(),
         x             : lastWindowState.x,
         y             : lastWindowState.y,
@@ -44,7 +45,6 @@ const createMainWindow = () => {
         height        : 700,
         minWidth      : 1000,
         minHeight     : 700,
-        // frame         : false,
     });
 
     const url = isDev ? 'http://localhost:4000' : `file://${path.join(__dirname, 'renderer', 'index.html')}`;
@@ -71,7 +71,9 @@ const createMainWindow = () => {
 };
 
 app.on('ready', () => {
-    Menu.setApplicationMenu(appMenu);
+    if (isDev) {
+        Menu.setApplicationMenu(appMenu);
+    }
     mainWindow = createMainWindow();
 });
 
