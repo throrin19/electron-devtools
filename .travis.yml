@@ -26,7 +26,6 @@ before_install:
     fi
 
 before_script:
-  - rvm get stable
   - git lfs pull
 
 script:
