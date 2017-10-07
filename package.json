@@ -12,6 +12,7 @@
     "both": "concurrently \"npm run dev\" \"npm run app\" -k",
     "app": "electron app/index.js",
     "dist": "npm run dist:mac && npm run dist:deb && npm run dist:win",
+    "dist:travis": "npm run dist:deb && npm run dist:win",
     "dist:mac": "build --mac",
     "dist:deb": "build --linux deb tar.xz",
     "dist:win": "build --win --x64"
