@@ -2,7 +2,7 @@
   "private": true,
   "name": "electron-toolbox",
   "description": "Many developpers tools in one electron app. Like a toolbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "postinstall": "cd app && npm install && rm -rf package-lock.json",
@@ -41,6 +41,7 @@
     "electron-builder-squirrel-windows": "19.27.3",
     "eslint": "4.5.0",
     "eslint-config-throrinstudio": "1.0.0",
+    "eslint-loader": "1.9.0",
     "less": "2.7.2",
     "less-loader": "4.0.5",
     "node-sass": "4.5.3",
