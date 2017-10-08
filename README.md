@@ -1,5 +1,7 @@
 # electron-toolbox
 
+![travis](https://travis-ci.org/throrin19/electron-devtools.svg?branch=master)
+
 This application aims to make life easier for developers by bringing together different tools in one place.
 
 For the moment it concentrates only on tools of conversion. If you need more tools, or improve the existing ones, please make your proposal on issues.
