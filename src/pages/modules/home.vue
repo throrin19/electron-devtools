@@ -10,7 +10,7 @@
                                 <div>This application aims to make life easier for developers by bringing together different tools in one place.</div>
                                 <br>
                                 <div>
-                                    For the moment it concentrates only on tools of voncersion. If you need more tools, or improve the existing ones, please make your proposal on the github Project
+                                    For the moment it concentrates only on tools of conversion. If you need more tools, or improve the existing ones, please make your proposal on the github Project
                                 </div>
                             </div>
                         </v-card-title>
