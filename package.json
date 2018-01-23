@@ -35,31 +35,35 @@
     }
   },
   "devDependencies": {
-    "concurrently": "3.5.0",
-    "electron": "1.7.5",
-    "electron-builder": "19.27.3",
-    "electron-builder-squirrel-windows": "19.27.3",
-    "eslint": "4.5.0",
-    "eslint-config-throrinstudio": "1.0.0",
+    "babel-eslint": "8.2.1",
+    "concurrently": "3.5.1",
+    "electron": "1.7.11",
+    "electron-builder": "19.54.0",
+    "electron-builder-squirrel-windows": "19.55.1",
+    "eslint": "4.16.0",
+    "eslint-config-throrinstudio": "1.2.0",
     "eslint-loader": "1.9.0",
-    "less": "2.7.2",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-vue": "4.2.0",
+    "less": "2.7.3",
     "less-loader": "4.0.5",
-    "node-sass": "4.5.3",
-    "poi": "9.3.3",
-    "poi-preset-eslint": "9.0.1",
+    "node-sass": "4.7.2",
+    "poi": "9.6.13",
+    "poi-preset-eslint": "9.1.1",
     "sass-loader": "6.0.6",
     "stylus": "0.54.5",
-    "stylus-loader": "3.0.1"
+    "stylus-loader": "3.0.1",
+    "vue-eslint-parser": "2.0.2"
   },
   "dependencies": {
-    "jsoneditor": "5.9.5",
+    "jsoneditor": "5.13.2",
     "lodash": "4.17.4",
-    "moment": "2.18.1",
-    "ms": "2.0.0",
+    "moment": "2.20.1",
+    "ms": "2.1.1",
     "muse-ui": "2.1.0",
     "roboto-fontface": "0.8.0",
     "v-clipboard": "1.0.4",
-    "vue-router": "2.7.0",
-    "vuetify": "0.15.0-beta.5"
+    "vue-router": "3.0.1",
+    "vuetify": "0.17.6"
   }
 }

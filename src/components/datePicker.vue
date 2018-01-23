@@ -6,14 +6,14 @@
         full-width
     >
         <v-text-field
-            slot="activator"
+            scope="activator"
             :label="label"
             v-model="inputValue"
             prepend-icon="event"
             readonly
         ></v-text-field>
         <v-date-picker v-model="inputValue" scrollable dark >
-            <template scope="{ save, cancel }">
+            <template slot-scope="{ save, cancel }">
                 <v-card-actions>
                     <v-btn flat primary @click="cancel">Cancel</v-btn>
                     <v-btn flat primary @click="saveDialog">Save</v-btn>

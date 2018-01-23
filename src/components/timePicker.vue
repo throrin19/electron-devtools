@@ -13,7 +13,7 @@
             readonly
         ></v-text-field>
         <v-time-picker v-model="inputValue" scrollable dark >
-            <template scope="{ save, cancel }">
+            <template slot-scope="{ save, cancel }">
                 <v-card-actions>
                     <v-btn flat primary v-on:click="cancel">Cancel</v-btn>
                     <v-btn flat primary v-on:click="saveDialog">Save</v-btn>
