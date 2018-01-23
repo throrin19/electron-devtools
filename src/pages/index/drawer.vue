@@ -1,8 +1,9 @@
 <template>
     <v-navigation-drawer
         height="100%"
+        app
+        fixed
         clipped
-        persistent
         permanent
     >
         <v-list dense>
@@ -33,7 +34,7 @@ export default {
     name  : 'Drawer',
     data() {
         return {
-            items  : menu,
+            items : menu,
         };
     },
 };

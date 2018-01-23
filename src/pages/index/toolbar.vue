@@ -1,5 +1,9 @@
 <template>
-    <v-toolbar class="deep-purple">
+    <v-toolbar
+        class="deep-purple"
+        app
+        clipped-left
+        fixed>
         <v-toolbar-title>
             <v-icon>developer_board</v-icon>
             Dev Toolbox
