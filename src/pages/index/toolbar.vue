@@ -8,9 +8,9 @@
 </template>
 
 <script>
-    export default {
-        name  : 'Toolbar',
-    };
+export default {
+    name  : 'Toolbar',
+};
 </script>
 
 <style lang="scss" rel="stylesheet/scss">

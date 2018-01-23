@@ -4,7 +4,9 @@
             You can either encode the String you want to base64 or decode a base64 String.
         </info-block>
         <v-container grid-list-lg>
-            <v-layout row wrap>
+            <v-layout
+                row
+                wrap>
                 <v-flex xs12>
                     <v-card>
                         <v-card-title>
@@ -14,22 +16,33 @@
                                 :error="error !== null"
                                 :error-messages="error ? [ error ] : []"
                                 multi-line
-                                dark
-                            ></v-text-field>
+                                dark/>
                         </v-card-title>
                         <v-card-actions>
-                            <v-btn flat primary v-on:click="encodeAction">Encode</v-btn>
-                            <v-btn flat primary v-on:click="decodeAction">Decode</v-btn>
+                            <v-btn
+                                flat
+                                primary
+                                @click="encodeAction">
+                                Encode
+                            </v-btn>
+                            <v-btn
+                                flat
+                                primary
+                                @click="decodeAction">
+                                Decode
+                            </v-btn>
                         </v-card-actions>
                     </v-card>
                 </v-flex>
                 <v-flex xs12>
-                    <v-card class="result" v-if="result">
+                    <v-card
+                        class="result"
+                        v-if="result">
                         <v-card-title>
                             <div class="headline">Result</div>
                         </v-card-title>
                         <v-card-text>
-                            <code-block :value="result"></code-block>
+                            <code-block :value="result"/>
                         </v-card-text>
                     </v-card>
                 </v-flex>
@@ -39,52 +52,52 @@
 </template>
 
 <script>
-    import infoBlock from '../../components/infoBlock.vue';
-    import codeBlock from '../../components/codeBlock.vue';
+import infoBlock from '../../components/infoBlock.vue';
+import codeBlock from '../../components/codeBlock.vue';
 
-    export default {
-        name       : 'base64',
-        components : {
-            infoBlock,
-            codeBlock,
+export default {
+    name       : 'Base64',
+    components : {
+        infoBlock,
+        codeBlock,
+    },
+    data() {
+        return {
+            result : null,
+            value  : null,
+            error  : null,
+        };
+    },
+    methods : {
+        encodeAction() {
+            this.result  = null;
+
+            if (!this.value) {
+                this.error = 'This field is required';
+                return;
+            }
+
+            this.error  = null;
+            this.result = btoa(unescape(encodeURIComponent(this.value)));
         },
-        data() {
-            return {
-                result : null,
-                value  : null,
-                error  : null,
-            };
-        },
-        methods : {
-            encodeAction() {
-                this.result  = null;
+        decodeAction() {
+            console.log('decode');
+            this.result = null;
 
-                if (!this.value) {
-                    this.error = 'This field is required';
-                    return;
-                }
+            if (!this.value) {
+                this.error = 'This field is required';
+                return;
+            }
 
+            try {
                 this.error  = null;
-                this.result = btoa(unescape(encodeURIComponent(this.value)));
-            },
-            decodeAction() {
-                console.log('decode');
-                this.result = null;
-
-                if (!this.value) {
-                    this.error = 'This field is required';
-                    return;
-                }
-
-                try {
-                    this.error  = null;
-                    this.result = decodeURIComponent(escape(window.atob(this.value)));
-                } catch (e) {
-                    this.error = 'This string is not a correct base64';
-                }
-            },
+                this.result = decodeURIComponent(escape(window.atob(this.value)));
+            } catch (e) {
+                this.error = 'This string is not a correct base64';
+            }
         },
-    };
+    },
+};
 </script>
 
 <style lang="scss" rel="stylesheet/scss">

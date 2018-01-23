@@ -37,12 +37,12 @@ module.exports = {
         });
     },
     presets : [
-        // require('poi-preset-eslint')({
-        //     loaderOptions : {
-        //         configFile  : path.resolve(__dirname, './.eslintrc.json'),
-        //         useEslintrc : true,
-        //     },
-        //     mode : '*',
-        // }),
+        require('poi-preset-eslint')({
+            loaderOptions : {
+                configFile  : path.resolve(__dirname, './.eslintrc.json'),
+                useEslintrc : true,
+            },
+            mode : '*',
+        }),
     ],
 };
