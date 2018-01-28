@@ -1,26 +1,26 @@
 <template>
     <div class="info-block valign-wrapper">
-        <v-icon class="pr-2" v-if="icon">{{ icon }}</v-icon>
+        <v-icon
+            class="pr-2"
+            v-if="icon">
+            {{ icon }}
+        </v-icon>
         <div class="message-content">
-            <slot></slot>
+            <slot/>
         </div>
     </div>
 </template>
 
 <script>
-    export default {
-        name    : 'infoBlock',
-        props   : {
-            icon : {
-                type : String,
-            },
+export default {
+    name    : 'InfoBlock',
+    props   : {
+        icon : {
+            type    : String,
+            default : undefined,
         },
-        data() {
-            return {
-
-            };
-        },
-    };
+    },
+};
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">

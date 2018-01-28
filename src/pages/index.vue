@@ -3,38 +3,62 @@
         height="415px"
         dark
         id="app"
-        standalone
-    >
-        <drawer></drawer>
-        <toolbar></toolbar>
-        <main>
-            <router-view></router-view>
-        </main>
+        standalone>
+        <drawer/>
+        <toolbar/>
+        <v-content id="app__content">
+            <div
+                id="app__scroller"
+                :style="styles">
+                <transition
+                    name="fade-transition"
+                    leave-class=""
+                    leave-active-class="">
+                    <router-view/>
+                </transition>
+            </div>
+        </v-content>
     </v-app>
 </template>
 
 <script>
-    import toolbar from './index/toolbar.vue';
-    import drawer from './index/drawer.vue';
+import toolbar from './index/toolbar.vue';
+import drawer from './index/drawer.vue';
 
-    export default {
-        namr        : 'App',
-        components  : {
-            toolbar,
-            drawer,
-            // titleBar,
-            // menuLeft,
+export default {
+    namr        : 'App',
+    components  : {
+        toolbar,
+        drawer,
+    },
+    computed : {
+        styles() {
+            const { bar, top, right, bottom, left } = this.$vuetify.application;
+
+            return {
+                top      : `${top + bar}px`,
+                right    : `${right}px`,
+                bottom   : `${bottom}px`,
+                left     : `${left}px`,
+            };
         },
-    };
+    },
+};
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-    main {
-        position: absolute;
-        right: 0;
-        top: 64px;
-        bottom: 0;
-        left: 0;
-        overflow: auto;
+#app {
+    height: 100%;
+
+    #app__content {
+        height: 100%;
     }
+
+    #app__scroller {
+        position: absolute;
+        overflow-y: auto;
+        overflow-x: hidden;
+        backface-visibility: hidden;
+    }
+}
 </style>

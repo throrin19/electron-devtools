@@ -1,38 +1,45 @@
 <template>
-    <div ref="jsoneditor" class="json-editor"></div>
+    <div
+        ref="jsoneditor"
+        class="json-editor"/>
 </template>
 
 <script>
-    import JsonEditor from 'jsoneditor';
-    import 'jsoneditor/dist/jsoneditor.css';
+import JsonEditor from 'jsoneditor';
+import 'jsoneditor/dist/jsoneditor.css';
 
-    export default {
-        name  : 'jsonEditor',
-        props : {
-            value   : Object,
-            options : {
-                type    : Object,
-                default() {
-                    return {};
-                },
+export default {
+    name  : 'JsonEditor',
+    props : {
+        value   : {
+            type : Object,
+            default() {
+                return {};
             },
         },
-        data() {
-            return {
-                inputValue : this.value,
-            };
-        },
-        mounted() {
-            this.editor = new JsonEditor(this.$refs.jsoneditor, this.options);
-            this.editor.set(this.inputValue);
-        },
-        watch : {
-            value(val) {
-                this.inputValue = val;
-                this.editor.set(val);
+        options : {
+            type    : Object,
+            default() {
+                return {};
             },
         },
-    };
+    },
+    data() {
+        return {
+            inputValue : this.value,
+        };
+    },
+    watch : {
+        value(val) {
+            this.inputValue = val;
+            this.editor.set(val);
+        },
+    },
+    mounted() {
+        this.editor = new JsonEditor(this.$refs.jsoneditor, this.options);
+        this.editor.set(this.inputValue);
+    },
+};
 </script>
 
 <style lang="scss" rel="stylesheet/scss">

@@ -1,27 +1,26 @@
 <template>
     <div class="code-block">
         <code>{{ value }}</code>
-        <v-btn icon
-               class="copy white--text"
-               v-clipboard="value"
-               v-tooltip:left="{ html : 'Copy to Clipboard' }">
+        <v-btn
+            icon
+            class="copy white--text"
+            v-clipboard="value"
+            v-tooltip:left="{ html : 'Copy to Clipboard' }">
             <v-icon>content_copy</v-icon>
         </v-btn>
     </div>
 </template>
 
 <script>
-    export default {
-        name    : 'codeBlock',
-        props   : {
-            value : String,
+export default {
+    name    : 'CodeBlock',
+    props   : {
+        value : {
+            type    : String,
+            default : undefined,
         },
-        methods : {
-            copyAction() {
-
-            },
-        },
-    };
+    },
+};
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">

@@ -1,12 +1,19 @@
 <template>
     <v-navigation-drawer
         height="100%"
+        app
+        fixed
         clipped
-        persistent
         permanent
     >
         <v-list dense>
-            <v-list-tile v-for="item in items" :key="item.name" :to="item.path" ripple exact>
+            <v-list-tile
+                v-for="item in items"
+                :key="item.name"
+                :to="item.path"
+                ripple
+                exact
+            >
                 <v-list-tile-action>
                     <v-icon>{{ item.icon }}</v-icon>
                 </v-list-tile-action>
@@ -21,16 +28,16 @@
 </template>
 
 <script>
-    import { menu } from '../../router';
+import { menu } from '../../router';
 
-    export default {
-        name  : 'Drawer',
-        data() {
-            return {
-                items  : menu,
-            };
-        },
-    };
+export default {
+    name  : 'Drawer',
+    data() {
+        return {
+            items : menu,
+        };
+    },
+};
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
