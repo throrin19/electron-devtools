@@ -2,7 +2,7 @@
   "private": true,
   "name": "electron-toolbox",
   "description": "Many developpers tools in one electron app. Like a toolbox",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "license": "MIT",
   "scripts": {
     "postinstall": "cd app && npm install && rm -rf package-lock.json",
