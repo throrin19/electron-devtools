@@ -72,7 +72,9 @@ const createMainWindow = () => {
 
 app.on('ready', () => {
     if (isDev) {
-        Menu.setApplicationMenu(appMenu);
+        Menu.setApplicationMenu(appMenu.dev);
+    } else {
+        Menu.setApplicationMenu(appMenu.prod);
     }
     mainWindow = createMainWindow();
 });

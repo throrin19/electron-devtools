@@ -155,4 +155,5 @@ if (process.platform === 'darwin') {
     ];
 }
 
-module.exports = Menu.buildFromTemplate(template);
+module.exports.dev = Menu.buildFromTemplate(template);
+module.exports.prod = Menu.buildFromTemplate([template[0], template[2]]);
